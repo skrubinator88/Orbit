@@ -19,6 +19,10 @@
 		C8C4BD4D241D663B00164AAE /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C4BD4C241D663B00164AAE /* MainController.swift */; };
 		C8C4BD4F241D663E00164AAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8C4BD4E241D663E00164AAE /* Assets.xcassets */; };
 		C8C4BD52241D663E00164AAE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8C4BD50241D663E00164AAE /* LaunchScreen.storyboard */; };
+		C8E716A6244F8E5C003BCAF1 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E716A4244F8E5C003BCAF1 /* RegisterViewController.swift */; };
+		C8E716A7244F8E5C003BCAF1 /* SessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E716A5244F8E5C003BCAF1 /* SessionViewController.swift */; };
+		C8E716A9244F8E82003BCAF1 /* PulseAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E716A8244F8E82003BCAF1 /* PulseAnimation.swift */; };
+		C8E716AB244F8E8D003BCAF1 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E716AA244F8E8D003BCAF1 /* CircleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +41,10 @@
 		C8C4BD4E241D663E00164AAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C8C4BD51241D663E00164AAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C8C4BD53241D663E00164AAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C8E716A4244F8E5C003BCAF1 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RegisterViewController.swift; path = Orbit/RegisterViewController.swift; sourceTree = SOURCE_ROOT; };
+		C8E716A5244F8E5C003BCAF1 /* SessionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SessionViewController.swift; path = Orbit/SessionViewController.swift; sourceTree = SOURCE_ROOT; };
+		C8E716A8244F8E82003BCAF1 /* PulseAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PulseAnimation.swift; sourceTree = "<group>"; };
+		C8E716AA244F8E8D003BCAF1 /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		D0A5F8DED9CE272BC13A1BF2 /* Pods_Orbit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Orbit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -64,6 +72,7 @@
 		C83C52E0241EE40E003FC073 /* Global */ = {
 			isa = PBXGroup;
 			children = (
+				C8E716A8244F8E82003BCAF1 /* PulseAnimation.swift */,
 				C83C52E1241EE423003FC073 /* BaseViewController.swift */,
 				C83C52E3241EE443003FC073 /* Theme.swift */,
 				C83C52E5241EE49A003FC073 /* FormTextField.swift */,
@@ -94,6 +103,9 @@
 		C8C4BD47241D663B00164AAE /* Orbit */ = {
 			isa = PBXGroup;
 			children = (
+				C8E716AA244F8E8D003BCAF1 /* CircleView.swift */,
+				C8E716A4244F8E5C003BCAF1 /* RegisterViewController.swift */,
+				C8E716A5244F8E5C003BCAF1 /* SessionViewController.swift */,
 				C83C52E0241EE40E003FC073 /* Global */,
 				C8C4BD48241D663B00164AAE /* AppDelegate.swift */,
 				C8C4BD4A241D663B00164AAE /* SceneDelegate.swift */,
@@ -229,12 +241,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				C83C52E2241EE423003FC073 /* BaseViewController.swift in Sources */,
+				C8E716A6244F8E5C003BCAF1 /* RegisterViewController.swift in Sources */,
 				C8C4BD4D241D663B00164AAE /* MainController.swift in Sources */,
 				C83C52EA241EE704003FC073 /* UIViewControllerExtension.swift in Sources */,
+				C8E716A9244F8E82003BCAF1 /* PulseAnimation.swift in Sources */,
 				C83C52DF241EE399003FC073 /* LoginViewController.swift in Sources */,
 				C83C52E8241EE4CC003FC073 /* PaddedTextField.swift in Sources */,
 				C83C52E6241EE49A003FC073 /* FormTextField.swift in Sources */,
+				C8E716AB244F8E8D003BCAF1 /* CircleView.swift in Sources */,
 				C83C52E4241EE443003FC073 /* Theme.swift in Sources */,
+				C8E716A7244F8E5C003BCAF1 /* SessionViewController.swift in Sources */,
 				C8C4BD49241D663B00164AAE /* AppDelegate.swift in Sources */,
 				C8C4BD4B241D663B00164AAE /* SceneDelegate.swift in Sources */,
 			);
