@@ -8,24 +8,26 @@
 
 import UIKit
 
-class RegisterViewController: UIViewController {
+class RegisterViewController: BaseViewController {
 
-    let userNameTextField: PaddedTextField = {
+    lazy var userNameTextField: PaddedTextField = {
         let paddedTextField = PaddedTextField()
         return paddedTextField
     }()
-    let passwordTextField: PaddedTextField = {
+    lazy var passwordTextField: PaddedTextField = {
         let paddedTextField = PaddedTextField()
         return paddedTextField
     }()
-    let confirmedPasswordTextField: PaddedTextField = {
+    lazy var confirmedPasswordTextField: PaddedTextField = {
         let paddedTextField = PaddedTextField()
         return paddedTextField
     }()
     
-    let signUpButton: UIButton = {
+    lazy var signUpButton: UIButton = {
         let paddedButton = UIButton()
         paddedButton.backgroundColor = .blue
+        paddedButton.layer.cornerRadius = 15
+        paddedButton.setTitle("Sign Up", for: .normal)
         return paddedButton
         
     }()
@@ -35,67 +37,51 @@ class RegisterViewController: UIViewController {
         iv.contentMode = .scaleAspectFit
         return iv
     }()
-    let registerBox:UIView = {
-        let rBox=UIView()
-        rBox.backgroundColor = UIColor.gray
-        rBox.frame = CGRect(x: 100, y: 100, width: 200, height: 400)
-        return rBox
-    }()
 
     fileprivate func setUpRegisterBox() {
 
         let userNameView: UIView = addTextFieldLabel(labelText: "Username", textField: userNameTextField, labelWidth: 90 )
         let passwordView: UIView = addTextFieldLabel(labelText: "Password", textField: passwordTextField, labelWidth: 90 )
         let confirmedPasswordView: UIView = addTextFieldLabel(labelText: "Confirm Password", textField: confirmedPasswordTextField, labelWidth: 160)
-        registerBox.addSubview(userNameView)
-        registerBox.addSubview(passwordView)
-        registerBox.addSubview(confirmedPasswordView)
-        registerBox.addSubview(signUpButton)
+        view.addSubview(userNameView)
+        view.addSubview(passwordView)
+        view.addSubview(confirmedPasswordView)
+        view.addSubview(signUpButton)
         view.addSubview(logo)
-        registerBox.layer.cornerRadius = 8.0
-        registerBox.clipsToBounds = true
-        registerBox.layer.borderWidth = 2
-        registerBox.layer.borderColor = UIColor.blue.cgColor
-        registerBox.backgroundColor = UIColor.white
-        view.addSubview(registerBox)
         
         userNameView.snp.makeConstraints { (make) in
-            make.top.equalToSuperview().offset(20)
-            make.right.left.equalToSuperview().offset(10)
-            make.height.equalTo(30)
+            make.centerY.equalToSuperview().offset(-200)
+            make.centerX.equalToSuperview()
+            make.height.equalTo(50)
+            make.width.equalToSuperview().inset(30)
         }
         
         passwordView.snp.makeConstraints { (make) in
-            make.top.equalTo(userNameView.snp.bottom).offset(15)
-            make.right.left.equalToSuperview().offset(10)
-            make.height.equalTo(30)
+            make.top.equalTo(userNameView.snp.bottom).offset(20)
+            make.centerX.equalToSuperview()
+            make.height.equalTo(50)
+            make.width.equalToSuperview().inset(30)
         }
 
         confirmedPasswordView.snp.makeConstraints { (make) in
-            make.top.equalTo(passwordView.snp.bottom).offset(15)
-            make.right.left.equalToSuperview().offset(10)
-            make.height.equalTo(30)
+            make.top.equalTo(passwordView.snp.bottom).offset(20)
+            make.centerX.equalToSuperview()
+            make.height.equalTo(50)
+            make.width.equalToSuperview().inset(30)
         }
 
         signUpButton.snp.makeConstraints { (make) in
             make.top.equalTo(confirmedPasswordView.snp.bottom).offset(20)
-            make.centerX.equalToSuperview()
-            make.height.equalTo(30)
-            make.width.equalTo(50)
+            make.right.equalTo(confirmedPasswordView.snp.right)
+            make.height.equalTo(35)
+            make.width.equalTo(100)
 
         }
-        registerBox.snp.makeConstraints{ (make) in
-            make.centerX.equalToSuperview()
-            make.centerY.equalToSuperview()
-            make.width.equalTo(300)
-            make.height.equalTo(400)
-            
-        }
         logo.snp.makeConstraints { (make) in
-            make.top.bottom.equalTo(self.view)
-            make.right.equalTo(self.view).offset(100)
-            make.height.equalTo(100)
-            make.width.equalTo(100)
+            make.top.equalToSuperview().offset(20)
+            make.right.equalToSuperview().offset(100)
+            make.height.equalTo(50)
+            make.width.equalTo(50)
         }
         
 
@@ -107,6 +93,7 @@ class RegisterViewController: UIViewController {
         self.view.backgroundColor = Theme.secondaryBackgroundColor
         setUpRegisterBox()
         // Do any additional setup after loading the view.
+        self.hideKeyboardWhenTappedAround()
         
     }
     func addTextFieldLabel(labelText:String , textField:PaddedTextField, labelWidth:Int = 120)-> UIView{
@@ -115,19 +102,22 @@ class RegisterViewController: UIViewController {
         view.addSubview(label)
         view.addSubview(textField)
 
-        label.text = labelText
+        label.text = labelText + ":"
         label.snp.makeConstraints { (make) in
-            make.left.equalToSuperview().offset(3)
+            make.left.equalToSuperview().offset(8)
             make.centerY.equalToSuperview()
             make.width.equalTo(labelWidth)
             make.height.equalTo(label.font.lineHeight)
         }
         
         textField.snp.makeConstraints { (make) in
-            make.right.equalToSuperview().offset(-3)
             make.top.bottom.height.equalToSuperview()
             make.left.width.equalToSuperview().offset(labelWidth)
         }
+        
+        view.layer.cornerRadius = 25
+        view.layer.borderWidth = 1
+        view.layer.borderColor = UIColor.black.cgColor
         
         return view
     }

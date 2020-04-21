@@ -36,8 +36,8 @@ class MainController: UINavigationController {
         }
         view.backgroundColor = Theme.primaryBackgroundColor
         
-        let loginController = LoginViewController()
-        viewControllers = [loginController]
+        let sessionViewController = SessionViewController()
+        viewControllers = [sessionViewController]
     }
 
     func showAuthAlert(message: String, title: String, isAuthError: Bool) {
