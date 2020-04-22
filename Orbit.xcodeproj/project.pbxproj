@@ -23,6 +23,12 @@
 		C8E716A7244F8E5C003BCAF1 /* SessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E716A5244F8E5C003BCAF1 /* SessionViewController.swift */; };
 		C8E716A9244F8E82003BCAF1 /* PulseAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E716A8244F8E82003BCAF1 /* PulseAnimation.swift */; };
 		C8E716AB244F8E8D003BCAF1 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E716AA244F8E8D003BCAF1 /* CircleView.swift */; };
+		C8E716AD244F8FCD003BCAF1 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E716AC244F8FCD003BCAF1 /* Session.swift */; };
+		C8E716B1244FAC18003BCAF1 /* SessionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E716B0244FAC18003BCAF1 /* SessionTableViewController.swift */; };
+		C8E716B3244FAF3B003BCAF1 /* SessionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E716B2244FAF3B003BCAF1 /* SessionTableViewCell.swift */; };
+		C8E716B5244FBFEB003BCAF1 /* CycleLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E716B4244FBFEB003BCAF1 /* CycleLabelView.swift */; };
+		C8E716B7244FC541003BCAF1 /* AddActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E716B6244FC541003BCAF1 /* AddActivityViewController.swift */; };
+		C8E716BB2450D3C9003BCAF1 /* StartupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E716BA2450D3C9003BCAF1 /* StartupViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +51,12 @@
 		C8E716A5244F8E5C003BCAF1 /* SessionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SessionViewController.swift; path = Orbit/SessionViewController.swift; sourceTree = SOURCE_ROOT; };
 		C8E716A8244F8E82003BCAF1 /* PulseAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PulseAnimation.swift; sourceTree = "<group>"; };
 		C8E716AA244F8E8D003BCAF1 /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		C8E716AC244F8FCD003BCAF1 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		C8E716B0244FAC18003BCAF1 /* SessionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionTableViewController.swift; sourceTree = "<group>"; };
+		C8E716B2244FAF3B003BCAF1 /* SessionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionTableViewCell.swift; sourceTree = "<group>"; };
+		C8E716B4244FBFEB003BCAF1 /* CycleLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CycleLabelView.swift; sourceTree = "<group>"; };
+		C8E716B6244FC541003BCAF1 /* AddActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddActivityViewController.swift; sourceTree = "<group>"; };
+		C8E716BA2450D3C9003BCAF1 /* StartupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartupViewController.swift; sourceTree = "<group>"; };
 		D0A5F8DED9CE272BC13A1BF2 /* Pods_Orbit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Orbit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -78,6 +90,7 @@
 				C83C52E5241EE49A003FC073 /* FormTextField.swift */,
 				C83C52E7241EE4CC003FC073 /* PaddedTextField.swift */,
 				C83C52E9241EE704003FC073 /* UIViewControllerExtension.swift */,
+				C8E716B4244FBFEB003BCAF1 /* CycleLabelView.swift */,
 			);
 			path = Global;
 			sourceTree = "<group>";
@@ -104,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				C8E716AA244F8E8D003BCAF1 /* CircleView.swift */,
+				C8E716B6244FC541003BCAF1 /* AddActivityViewController.swift */,
 				C8E716A4244F8E5C003BCAF1 /* RegisterViewController.swift */,
 				C8E716A5244F8E5C003BCAF1 /* SessionViewController.swift */,
 				C83C52E0241EE40E003FC073 /* Global */,
@@ -114,6 +128,10 @@
 				C8C4BD50241D663E00164AAE /* LaunchScreen.storyboard */,
 				C8C4BD53241D663E00164AAE /* Info.plist */,
 				C83C52DE241EE398003FC073 /* LoginViewController.swift */,
+				C8E716AC244F8FCD003BCAF1 /* Session.swift */,
+				C8E716B0244FAC18003BCAF1 /* SessionTableViewController.swift */,
+				C8E716B2244FAF3B003BCAF1 /* SessionTableViewCell.swift */,
+				C8E716BA2450D3C9003BCAF1 /* StartupViewController.swift */,
 			);
 			path = Orbit;
 			sourceTree = "<group>";
@@ -240,7 +258,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8E716AD244F8FCD003BCAF1 /* Session.swift in Sources */,
 				C83C52E2241EE423003FC073 /* BaseViewController.swift in Sources */,
+				C8E716B1244FAC18003BCAF1 /* SessionTableViewController.swift in Sources */,
+				C8E716BB2450D3C9003BCAF1 /* StartupViewController.swift in Sources */,
+				C8E716B7244FC541003BCAF1 /* AddActivityViewController.swift in Sources */,
+				C8E716B5244FBFEB003BCAF1 /* CycleLabelView.swift in Sources */,
 				C8E716A6244F8E5C003BCAF1 /* RegisterViewController.swift in Sources */,
 				C8C4BD4D241D663B00164AAE /* MainController.swift in Sources */,
 				C83C52EA241EE704003FC073 /* UIViewControllerExtension.swift in Sources */,
@@ -250,6 +273,7 @@
 				C83C52E6241EE49A003FC073 /* FormTextField.swift in Sources */,
 				C8E716AB244F8E8D003BCAF1 /* CircleView.swift in Sources */,
 				C83C52E4241EE443003FC073 /* Theme.swift in Sources */,
+				C8E716B3244FAF3B003BCAF1 /* SessionTableViewCell.swift in Sources */,
 				C8E716A7244F8E5C003BCAF1 /* SessionViewController.swift in Sources */,
 				C8C4BD49241D663B00164AAE /* AppDelegate.swift in Sources */,
 				C8C4BD4B241D663B00164AAE /* SceneDelegate.swift in Sources */,
