@@ -17,12 +17,12 @@ class MainController: UINavigationController {
             let navigationBarAppearance = UINavigationBarAppearance()
             navigationBarAppearance.configureWithOpaqueBackground()
             navigationBarAppearance.backgroundColor = Theme.secondaryBackgroundColor
-            navigationBarAppearance.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
-            navigationBarAppearance.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+            navigationBarAppearance.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor(red: 51/255, green: 51/255, blue: 102/255, alpha: 1)]
+            navigationBarAppearance.titleTextAttributes = [NSAttributedString.Key.foregroundColor: Theme.backgroundColor]
             let standardButtonAppearance = UIBarButtonItemAppearance(style: .plain)
             let doneButtonAppearance = UIBarButtonItemAppearance(style: .done)
-            standardButtonAppearance.normal.titleTextAttributes = [.foregroundColor: UIColor.white]
-            doneButtonAppearance.normal.titleTextAttributes = [.foregroundColor: UIColor.white]
+            standardButtonAppearance.normal.titleTextAttributes = [.foregroundColor: UIColor(red: 51/255, green: 51/255, blue: 102/255, alpha: 1)]
+            doneButtonAppearance.normal.titleTextAttributes = [.foregroundColor: UIColor(red: 51/255, green: 51/255, blue: 102/255, alpha: 1)]
             navigationBarAppearance.buttonAppearance = standardButtonAppearance
             navigationBarAppearance.doneButtonAppearance = doneButtonAppearance
             navigationBar.scrollEdgeAppearance = navigationBarAppearance
@@ -32,11 +32,11 @@ class MainController: UINavigationController {
         } else {
             // Fallback on earlier versions
             navigationBar.barTintColor = Theme.secondaryBackgroundColor
-            navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+            navigationBar.titleTextAttributes = [.foregroundColor: Theme.backgroundColor]
         }
         view.backgroundColor = Theme.primaryBackgroundColor
         
-        let sessionViewController = SessionViewController()
+        let sessionViewController = SessionTableViewController()
         viewControllers = [sessionViewController]
     }
 
