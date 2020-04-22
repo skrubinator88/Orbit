@@ -8,11 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		69D9E427A1E0707AA5B56B07 /* Pods_Orbit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0A5F8DED9CE272BC13A1BF2 /* Pods_Orbit.framework */; };
-		8E144956244FA26B00D3B289 /* TransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E144955244FA26B00D3B289 /* TransitionController.swift */; };
-		8E144958244FB20D00D3B289 /* BEMCheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E144957244FB20D00D3B289 /* BEMCheckBox.swift */; };
-		8E14495A244FB32700D3B289 /* BEMPathManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E144959244FB32700D3B289 /* BEMPathManager.swift */; };
-		8E14495C244FB35A00D3B289 /* BEMCheckBoxGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E14495B244FB35A00D3B289 /* BEMCheckBoxGroup.swift */; };
-		8E14495E244FB3B000D3B289 /* BEMAnimationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E14495D244FB3B000D3B289 /* BEMAnimationManager.swift */; };
 		8E144962244FC5CF00D3B289 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E144961244FC5CF00D3B289 /* Default-568h@2x.png */; };
 		C83C52DF241EE399003FC073 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83C52DE241EE398003FC073 /* LoginViewController.swift */; };
 		C83C52E2241EE423003FC073 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83C52E1241EE423003FC073 /* BaseViewController.swift */; };
@@ -40,11 +35,6 @@
 /* Begin PBXFileReference section */
 		1D59FAEB3A28793410498EF8 /* Pods-Orbit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Orbit.release.xcconfig"; path = "Target Support Files/Pods-Orbit/Pods-Orbit.release.xcconfig"; sourceTree = "<group>"; };
 		4EB38EB9049BA8A32BB5747E /* Pods-Orbit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Orbit.debug.xcconfig"; path = "Target Support Files/Pods-Orbit/Pods-Orbit.debug.xcconfig"; sourceTree = "<group>"; };
-		8E144955244FA26B00D3B289 /* TransitionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionController.swift; sourceTree = "<group>"; };
-		8E144957244FB20D00D3B289 /* BEMCheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BEMCheckBox.swift; sourceTree = "<group>"; };
-		8E144959244FB32700D3B289 /* BEMPathManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BEMPathManager.swift; sourceTree = "<group>"; };
-		8E14495B244FB35A00D3B289 /* BEMCheckBoxGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BEMCheckBoxGroup.swift; sourceTree = "<group>"; };
-		8E14495D244FB3B000D3B289 /* BEMAnimationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BEMAnimationManager.swift; sourceTree = "<group>"; };
 		8E144961244FC5CF00D3B289 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		C83C52DE241EE398003FC073 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C83C52E1241EE423003FC073 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -102,10 +92,6 @@
 				C83C52E7241EE4CC003FC073 /* PaddedTextField.swift */,
 				C83C52E9241EE704003FC073 /* UIViewControllerExtension.swift */,
 				C8E716B4244FBFEB003BCAF1 /* CycleLabelView.swift */,
-				8E144957244FB20D00D3B289 /* BEMCheckBox.swift */,
-				8E144959244FB32700D3B289 /* BEMPathManager.swift */,
-				8E14495B244FB35A00D3B289 /* BEMCheckBoxGroup.swift */,
-				8E14495D244FB3B000D3B289 /* BEMAnimationManager.swift */,
 			);
 			path = Global;
 			sourceTree = "<group>";
@@ -142,7 +128,6 @@
 				C8C4BD4C241D663B00164AAE /* MainController.swift */,
 				C8C4BD4E241D663E00164AAE /* Assets.xcassets */,
 				C8C4BD50241D663E00164AAE /* LaunchScreen.storyboard */,
-				8E144955244FA26B00D3B289 /* TransitionController.swift */,
 				C83C52DE241EE398003FC073 /* LoginViewController.swift */,
 				C8E716AC244F8FCD003BCAF1 /* Session.swift */,
 				C8E716B0244FAC18003BCAF1 /* SessionTableViewController.swift */,
@@ -283,17 +268,12 @@
 				C8E716B5244FBFEB003BCAF1 /* CycleLabelView.swift in Sources */,
 				C8E716A6244F8E5C003BCAF1 /* RegisterViewController.swift in Sources */,
 				C8C4BD4D241D663B00164AAE /* MainController.swift in Sources */,
-				8E14495E244FB3B000D3B289 /* BEMAnimationManager.swift in Sources */,
 				C83C52EA241EE704003FC073 /* UIViewControllerExtension.swift in Sources */,
-				8E144958244FB20D00D3B289 /* BEMCheckBox.swift in Sources */,
-				8E144956244FA26B00D3B289 /* TransitionController.swift in Sources */,
 				C8E716A9244F8E82003BCAF1 /* PulseAnimation.swift in Sources */,
-				8E14495C244FB35A00D3B289 /* BEMCheckBoxGroup.swift in Sources */,
 				C83C52DF241EE399003FC073 /* LoginViewController.swift in Sources */,
 				C83C52E8241EE4CC003FC073 /* PaddedTextField.swift in Sources */,
 				C83C52E6241EE49A003FC073 /* FormTextField.swift in Sources */,
 				C8E716AB244F8E8D003BCAF1 /* CircleView.swift in Sources */,
-				8E14495A244FB32700D3B289 /* BEMPathManager.swift in Sources */,
 				C83C52E4241EE443003FC073 /* Theme.swift in Sources */,
 				C8E716B3244FAF3B003BCAF1 /* SessionTableViewCell.swift in Sources */,
 				C8E716A7244F8E5C003BCAF1 /* SessionViewController.swift in Sources */,

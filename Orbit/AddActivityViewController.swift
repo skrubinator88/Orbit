@@ -130,7 +130,7 @@ class AddActivityViewController: UIViewController {
         
         activityInterval = activityInterval! * 60
         breakInterval = breakInterval! * 60
-        let session = Session(cycles: 0, activityLength: activityInterval!, breakLength: breakInterval!, activityName: activityTextField.text!)
+        let session = Session(cycles: 1, activityLength: activityInterval!, breakLength: breakInterval!, activityName: activityTextField.text!)
         
         let sessionViewController = SessionViewController()
         sessionViewController.session = session

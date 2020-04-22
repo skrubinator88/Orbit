@@ -16,18 +16,22 @@ class RegisterViewController: BaseViewController {
     }()
     lazy var passwordTextField: PaddedTextField = {
         let paddedTextField = PaddedTextField()
+        paddedTextField.isSecureTextEntry =  true
         return paddedTextField
     }()
     lazy var confirmedPasswordTextField: PaddedTextField = {
         let paddedTextField = PaddedTextField()
+        paddedTextField.isSecureTextEntry =  true
         return paddedTextField
     }()
     
     lazy var signUpButton: UIButton = {
-        let paddedButton = UIButton()
+        let paddedButton = UIButton(type: .system)
         paddedButton.backgroundColor = .blue
         paddedButton.layer.cornerRadius = 15
+        paddedButton.tintColor = .white
         paddedButton.setTitle("Sign Up", for: .normal)
+        paddedButton.addTarget(self, action: #selector(signUpButtonTapped), for: .touchUpInside)
         return paddedButton
         
     }()
@@ -78,31 +82,32 @@ class RegisterViewController: BaseViewController {
 
         }
         logo.snp.makeConstraints { (make) in
-            make.top.equalToSuperview().offset(20)
-            make.right.equalToSuperview().offset(100)
-            make.height.equalTo(50)
-            make.width.equalTo(50)
+            make.top.equalToSuperview().offset(100)
+            make.right.equalToSuperview().offset(-50)
+            make.height.equalTo(80)
+            make.width.equalTo(80)
         }
         
 
     }
     
     override func viewDidLoad() {
-        
         super.viewDidLoad()
-        self.view.backgroundColor = Theme.secondaryBackgroundColor
+        view.backgroundColor = Theme.secondaryBackgroundColor
         setUpRegisterBox()
         // Do any additional setup after loading the view.
         self.hideKeyboardWhenTappedAround()
-        
+        navigationController?.navigationBar.isHidden = false
     }
     func addTextFieldLabel(labelText:String , textField:PaddedTextField, labelWidth:Int = 120)-> UIView{
         let view = UIView()
+        view.backgroundColor = .white
         let label = UILabel()
         view.addSubview(label)
         view.addSubview(textField)
 
         label.text = labelText + ":"
+        label.font = UIFont.init(name: Theme.font, size: 18)
         label.snp.makeConstraints { (make) in
             make.left.equalToSuperview().offset(8)
             make.centerY.equalToSuperview()
@@ -116,22 +121,17 @@ class RegisterViewController: BaseViewController {
         }
         
         view.layer.cornerRadius = 25
-        view.layer.borderWidth = 1
-        view.layer.borderColor = UIColor.black.cgColor
+        view.layer.borderWidth = 1.5
+        view.layer.borderColor = UIColor.black.withAlphaComponent(0.5).cgColor
         
         return view
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @objc func signUpButtonTapped() {
+        let nc = navigationController as? MainController
+        nc?.login()
     }
-    */
 
 }
 

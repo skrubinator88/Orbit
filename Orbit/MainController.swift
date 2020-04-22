@@ -36,9 +36,8 @@ class MainController: UINavigationController {
         }
         view.backgroundColor = Theme.primaryBackgroundColor
         
-        //let sessionViewController = SessionViewController()
-        let transitionController = TransitionController()
-        viewControllers = [transitionController]
+        let startUpViewController = StartupViewController()
+        viewControllers = [startUpViewController]
     }
 
     func showAuthAlert(message: String, title: String, isAuthError: Bool) {
@@ -50,6 +49,10 @@ class MainController: UINavigationController {
         }
         alert.addAction(okAction)
         present(alert, animated: true, completion: nil)
+    }
+    
+    func login() {
+        self.viewControllers = [SessionTableViewController()]
     }
     
     func logoutUser() {

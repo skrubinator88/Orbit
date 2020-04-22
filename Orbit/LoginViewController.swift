@@ -72,8 +72,11 @@ class LoginViewController: BaseViewController {
             make.height.equalTo(55)
             make.width.equalTo(300)
         }
-        self.navigationController?.isNavigationBarHidden = true
         self.hideKeyboardWhenTappedAround()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        navigationController?.navigationBar.isHidden = false
     }
     
     @objc func loginUser() {
@@ -87,7 +90,6 @@ class LoginViewController: BaseViewController {
             nc.showAuthAlert(message: "Username and password fields must not be empty", title: "Invalid Input", isAuthError: false)
             return
         }
-//        let loginRequestModel = LoginRequestModel(requestUsername: usernameText, requestPassword: passwordText)
-//        delegate?.handleLogin(loginRequestModel: loginRequestModel)
+        nc.login()
     }
 }
