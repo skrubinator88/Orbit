@@ -36,8 +36,9 @@ class MainController: UINavigationController {
         }
         view.backgroundColor = Theme.primaryBackgroundColor
         
-        let sessionViewController = SessionTableViewController()
-        viewControllers = [sessionViewController]
+        //let sessionViewController = SessionViewController()
+        let transitionController = TransitionController()
+        viewControllers = [transitionController]
     }
 
     func showAuthAlert(message: String, title: String, isAuthError: Bool) {
